@@ -1,0 +1,25 @@
+** sch_path: /foss/tools/xschem/share/xschem/xschem_library/devices/dsrt2026_Ahmad_Harisul_Hikam.sch
+**.subckt dsrt2026_Ahmad_Harisul_Hikam
+XM1 out in 0 0 sky130_fd_pr__nfet_01v8 L=0.15 W=3 nf=1 ad=0.87 as=0.87 pd=6.58 ps=6.58 nrd=0.0966666666666667
++ nrs=0.0966666666666667 sa=0 sb=0 sd=0 mult=1
+V1 net1 0 1.8
+V2 in 0 0
+XM2 out in net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=9 nf=1 ad=2.61 as=2.61 pd=18.58 ps=18.58 nrd=0.0322222222222222
++ nrs=0.0322222222222222 sa=0 sb=0 sd=0 mult=1
+**** begin user architecture code
+
+
+
+.option wnflag=0
+.option savecurrents
+.control
+save all
+dc v2 0 1.8. 0.01
+plot in out
+op
+.endc
+
+
+**** end user architecture code
+**.ends
+.end
